@@ -1,4 +1,4 @@
-#토픽과 서비스
+# 토픽과 서비스
 
 ROS의 메시지 통신 방법에는 크게 세가지 방식이 있다.
 1. Topic : publisher와 subscriber로 나뉘어 publisher는 송신만, subscriber는 수신만 하는 단방향 비동기 통신
