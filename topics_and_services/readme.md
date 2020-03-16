@@ -1,4 +1,4 @@
-# 토픽과 서비스
+#토픽과 서비스
 
 ROS의 메시지 통신 방법에는 크게 세가지 방식이 있다.
 1. Topic : publisher와 subscriber로 나뉘어 publisher는 송신만, subscriber는 수신만 하는 단방향 비동기 통신
@@ -117,3 +117,41 @@ Publisher 클래스는 다음과 같이 인자를 받아들인다
 >rospy.Publisher(name,data_class,queue_size)
 
 순서대로 노드의 이름, 주고받는 메시지의 형식, 그리고 메시지 큐의 크기를 나타낸다
+publisher의 선언이 완료되면 publish() 메소드로 메시지를 발행하면 된다
+
+다음은 subscriber의 구현이다
+subscriber는 publisher와 마찬가지로 Subscriber 클래스를 사용하면 되는데,
+publisher가 메시지를 발행 할때까지 대기해야 한다
+
+>rospy.Subscriber(name, data_class, callback)
+
+subscriber는 publisher와 다르게 콜백 함수를 인자로 받아들인다
+콜백 함수는 subscriber가 새로운 메시지를 읽어올 때마다 실행되는 함수를 말한다
+
+## Service
+
+서비스는 서버와 클라이언트가 메시지를 주고받는 방식이다
+catkin_make를 실행하여 패키지를 빌드하면 시스템이 자동으로 서비스 클래스를 만들어 준다
+
+>from YOUR_PACKAGE_NAME.srv import *
+
+위 명령어로 생성된 파이썬 파일안의 클래스들을 불러올 수 있다
+이렇게 불러온 클래스 안에는 서비스 클래스등이 정의되어 있다
+서비스 클래스의 이름은 전부 서비스 파일명+Response 등으로 파일이름과 비슷하므로 필요한 클래스만을 따로 불러오는것도 가능하다
+
+>rospy.Service(name, service_class, handler)
+
+위의 명령어를 통해 통신에 필요한 서버를 생성할 수 있다
+
+다음은 클라이언트의 구현 방법이다
+클라이언트는 서버에 필요한 값들을 넘겨주고 결과를 기다린다
+
+>rospy.ServiceProxy(name, service_class)
+
+위 클래스를 선언하면 서버에 값을 넘겨줄 수 있다
+
+서비스 통신에서는 서버와 클라이언트의 서비스 클래스가 일치해야 하며,
+서비스 파일에 정의된 대로의 입출력 양식을 지켜야 한다(액션도 마찬가지)
+## Action
+
+액션은 잘 안 쓰이므로 생략
