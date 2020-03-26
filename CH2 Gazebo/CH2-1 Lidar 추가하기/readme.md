@@ -14,7 +14,7 @@ xacro파일은 gazebo에서의 여러가지 동작을 정의해놓은 파일이�
 센서의 외형은 이미 모델링되어있는 파일을 쓰면 된다.
 아래 명령어를 이용하여 센서의 urdf를 작성해주자.
 
-> cd $ROS_ROOT/../turtlebot_description/urdf/sensors
+> cd $ROS_ROOT/../turtlebot_description/urdf/sensors  
 sudo gedit hokuyo.urdf.xacro
 
 그 다음, 이하의 내용을 적어준다
@@ -113,8 +113,8 @@ min은 최소값, max는 최댓값을 말한다(단위 m).
 다음은 우리가 정의한 센서를 xtion대신 사용하겠다는 설정이 필요하다.
 다음의 명령어를 입력하자.
 
->cd ../../robots/
-sudo cp kobuki_hexagons_asus_xtion_pro.urdf.xacro kobuki_hexagons_hokuyo.urdf.xacro
+>cd ../../robots/  
+sudo cp kobuki_hexagons_asus_xtion_pro.urdf.xacro kobuki_hexagons_hokuyo.urdf.xacro  
 sudo gedit kobuki_hexagons_hokuyo.urdf.xacro 
 
 다음 내용을 입력한다.
