@@ -20,4 +20,6 @@ Lidar센서의 정보를 읽어오려면 /scan토픽을 subscribe하면 된다.
 벽을 마주칠때까지 -z방향으로 돌고, 벽을 마주치면 +z방향으로 돌아서 장애물을 오른쪽에 둔다.
 오른쪽에 장애물이 있으면 직진, 전방과 오른쪽에 장애물을 감지하면 +z방향으로 회전하는 방식이다.
 
+결과는 아래 동영상 링크에 첨부함.
+
 [![wall tracking video](https://img.youtube.com/vi/RJQvuZxlY7Y/0.jpg)](https://www.youtube.com/watch?v=RJQvuZxlY7Y)
