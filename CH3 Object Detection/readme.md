@@ -42,8 +42,8 @@ gazebo에서 터틀봇을 부르고 rviz를 통해 카메라 이미지가 제대
 	roslaunch turtlebot_gazebo turtlebot_world.launch
 	rosrun rviz rviz
 	
-![gazebo](./img/camera gazebo.png)
+![gazebo](./img/camera_gazebo.png)
 rviz에서는 fixed frame에 robot_base를 넣고  
 Add 에서 by topic항목에서 image를 선택하고 topic이름을 넣어주면 된다.
 
-![rviz](./img/camera rviz.png)
+![rviz](./img/camera_rviz.png)
