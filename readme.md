@@ -8,3 +8,4 @@
 	- 2-2 : 간단한 wall tracking 알고리즘
 	
 3. Object Detection : 카메라를 통해 얻은 정보로 물체인식하기
+	- 3-1 : OpenCV 창에서 카메라 영상 띄우기
