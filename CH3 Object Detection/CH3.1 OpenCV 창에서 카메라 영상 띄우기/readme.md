@@ -21,5 +21,6 @@ gazebo에서 토픽을 갱신할 때 마다 OpenCV 창에 변환된 이미지를
 마찬가지로 main 함수에서 키보드 인터럽트가 발생하면 모든 창을 닫는 함수가 실행된다. 이 구조로 해놓지 않으면 창을 닫는데 매우 수고스러울 수 있으므로 OpenCV 코드를 짤때는 destroyAllWindows 부분을 주의깊게 살펴보아야 한다.
 
 ## 결과
-영상으로 확인해 보자.(구좋알 팍팍)
+영상으로 확인해 보자.(구좋알 팍팍)  
+
 [![opencv video](https://img.youtube.com/vi/VMaZyb9xJM8/0.jpg)](https://www.youtube.com/watch?v=VMaZyb9xJM8)
